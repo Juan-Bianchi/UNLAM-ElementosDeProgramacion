@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1656256957 source:c:\users\juan\desktop\codificaciones-progra1\elementos\unidad2\testunidad2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../Unidad2.h"
+
+1656212399 c:\users\juan\desktop\codificaciones-progra1\elementos\unidad2\unidad2.h
+
