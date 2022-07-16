@@ -1,5 +1,5 @@
 #include "Unidad5.1.h"
-
+//Modificacion desde gitHub
 
 booleano esValidoFloatEntre(const void* num, const void* minimo, const void* maximo);
 booleano esValidoFloatMayA(const void* num, const void* inf);
@@ -11,7 +11,7 @@ float validaFloatMayA(const float inf, EsValidoMayorA mayorA);
 float validaFloatEntre(const float inf, const float sup, EsValidoEntre estaEntre);
 
 
-/*5.1.1 Mostrar por pantalla los n˙meros pares comprendidos entre 100 y 500.*/
+/*5.1.1 Mostrar por pantalla los n√∫meros pares comprendidos entre 100 y 500.*/
 int ejercicio51punto1()
 {
     int par, minimo = 100, maximo = 500;
@@ -44,7 +44,7 @@ int ejercicio51punto2()
 
 
 
-/*5.1.3 Se ingresan 50 n˙meros enteros. Determinar el promedio de los n˙meros pares.*/
+/*5.1.3 Se ingresan 50 n√∫meros enteros. Determinar el promedio de los n√∫meros pares.*/
 int ejercicio51punto3()
 {
    int i, num, cont=0;
@@ -101,7 +101,7 @@ int ejercicio51punto4()
 
 
 
-/*5.1.5 Confeccionar un programa para calcular la suma de los primeros N n˙meros naturales. El valor de N lo solicita por teclado el programa.*/
+/*5.1.5 Confeccionar un programa para calcular la suma de los primeros N n√∫meros naturales. El valor de N lo solicita por teclado el programa.*/
 int ejercicio51punto5()
 {
     int cantidad, i;
@@ -123,9 +123,9 @@ int ejercicio51punto5()
 
 
 
-/*5.1.6 Ingresar N y N N˙meros naturales. Determinar e informar:
-a. La sumatoria de los valores m˙ltiplos de 3.
-b. La cantidad de valores m˙ltiplos de 5.
+/*5.1.6 Ingresar N y N N√∫meros naturales. Determinar e informar:
+a. La sumatoria de los valores m√∫ltiplos de 3.
+b. La cantidad de valores m√∫ltiplos de 5.
 c. La sumatoria de los valores que se ingresan en orden par.*/
 int ejercicio51punto6()
 {
@@ -164,7 +164,7 @@ int ejercicio51punto6()
 
 /*5.1.7 Dadas 20 notas y legajos de alumnos de un curso. Determinar:
 a. Cantidad de alumnos aplazados.
-b. Cuando la nota sea mayor a 7, mostrar el mensaje: ìEl alumno con legajo xxx ha Promocionadoî.*/
+b. Cuando la nota sea mayor a 7, mostrar el mensaje: ‚ÄúEl alumno con legajo xxx ha Promocionado‚Äù.*/
 int ejercicio51punto7()
 {
     int nota, legajo, i, cantApl=0;
@@ -194,7 +194,7 @@ int ejercicio51punto7()
 /*5.1.8 Dadas las edades y estaturas de 45 alumnos de un curso. Determinar:
 a. Edad promedio.
 b. Estatura promedio.
-c. Cantidad de alumnos mayores de 10 aÒos.
+c. Cantidad de alumnos mayores de 10 a√±os.
 d. Cantidad de alumnos que miden menos de 1.40 cm.*/
 int ejercicio51punto8()
 {
@@ -229,8 +229,8 @@ int ejercicio51punto8()
 
 
 
-/*5.1.9 Confeccionar un programa que exhiba por pantalla una lista, a dos columnas, con los primeros 15 n˙meros impares en la primera y los 15
-primeros pares en la segunda, incluyendo los tÌtulos.*/
+/*5.1.9 Confeccionar un programa que exhiba por pantalla una lista, a dos columnas, con los primeros 15 n√∫meros impares en la primera y los 15
+primeros pares en la segunda, incluyendo los t√≠tulos.*/
 int ejercicio51punto9()
 {
     int i;
@@ -248,7 +248,7 @@ int ejercicio51punto9()
 
 
 
-/*5.1.10 Confeccionar un programa que solicite el ingreso de un valor entero N < 12 y luego una lista de N n˙meros reales sobre la cual debe
+/*5.1.10 Confeccionar un programa que solicite el ingreso de un valor entero N < 12 y luego una lista de N n√∫meros reales sobre la cual debe
 calcular:
 a. el promedio de los positivos.
 b. el promedio de los negativos.
@@ -336,8 +336,8 @@ int ejercicio51punto11()
 
 
 
-/*5.1.12 Calcular el factorial de un n˙mero ingresado por teclado. El factorial se calcula como el producto de todos los enteros positivos
-desde 1 hasta el n˙mero. En matem·tica el factorial se expresa con el sÌmbolo. Por ejemplo, el factorial de 5 es 120 ya
+/*5.1.12 Calcular el factorial de un n√∫mero ingresado por teclado. El factorial se calcula como el producto de todos los enteros positivos
+desde 1 hasta el n√∫mero. En matem√°tica el factorial se expresa con el s√≠mbolo. Por ejemplo, el factorial de 5 es 120 ya
 que 5! = 1 x 2 x 3 x 4 x 5 =120*/
 int ejercicio51punto12()
 {
@@ -362,7 +362,7 @@ int ejercicio51punto12()
 
 
 /*5.1.13 Realizar un programa que:
-a. Muestre todos los n˙meros primos entre 1 y 100. (Un nro. es primo cuando es divisible solamente por 1 y por sÌ mismo)
+a. Muestre todos los n√∫meros primos entre 1 y 100. (Un nro. es primo cuando es divisible solamente por 1 y por s√≠ mismo)
 b. Contar y mostrar la cantidad de primos encontrados.*/
 int ejercicio51punto13()
 {
@@ -392,8 +392,8 @@ int ejercicio51punto13()
 
 
 
-/*5.1.14 Confeccionar un programa que determine e informe los n˙meros perfectos comprendidos entre 1 y 9000. Un n˙mero es perfecto cuando es
-igual a la suma de sus divisores positivos menores que Èl.*/
+/*5.1.14 Confeccionar un programa que determine e informe los n√∫meros perfectos comprendidos entre 1 y 9000. Un n√∫mero es perfecto cuando es
+igual a la suma de sus divisores positivos menores que √©l.*/
 int ejercicio51punto14()
 {
     int i, j, sumaDiv;
@@ -418,7 +418,7 @@ int ejercicio51punto14()
 
 
 
-/*5.1.15 Se realizÛ un concurso de tiro al blanco. Existen 5 participantes y cada uno de ellos efect˙a 3 disparos, registr·ndose las
+/*5.1.15 Se realiz√≥ un concurso de tiro al blanco. Existen 5 participantes y cada uno de ellos efect√∫a 3 disparos, registr√°ndose las
 coordenadas X-Y de cada disparo. Determinar:
 a. Cuantos disparos se efectuaron en cada cuadrante por cada participante
 b. Cuantos disparos se efectuaron en total en el centro.
@@ -482,7 +482,7 @@ int ejercicio51punto15()
 
 
 
-/*5.1.16 Se ingresan DNI y la nota promedio de 10 alumnos. Determinar el DNI del alumno de mayor nota promedio (considerar ˙nico).*/
+/*5.1.16 Se ingresan DNI y la nota promedio de 10 alumnos. Determinar el DNI del alumno de mayor nota promedio (considerar √∫nico).*/
 int ejercicio51punto16()
 {
     int dni, i, dniMayor;
@@ -509,8 +509,8 @@ int ejercicio51punto16()
 
 
 
-/*5.1.17 Ingresar N artÌculos (cÛdigos) y sus correspondientes precios. Indicar el cÛdigo del artÌculo m·s caro y el precio del m·s barato.
-NOTA: todos los artÌculos tienen precios distintos.*/
+/*5.1.17 Ingresar N art√≠culos (c√≥digos) y sus correspondientes precios. Indicar el c√≥digo del art√≠culo m√°s caro y el precio del m√°s barato.
+NOTA: todos los art√≠culos tienen precios distintos.*/
 int ejercicio51punto17()
 {
     int cant, cod, codMAyor, i;
@@ -583,8 +583,8 @@ int ejercicio51punto18()
 
 
 
-/*5.1.19 Ingresar un n˙mero entero mayor a 0. Debe dibujar un tri·ngulo rect·ngulo con * con tantas filas como el n˙mero indicado. En cada fila
-se va incrementando la cantidad de asteriscos. Por ejemplo, si se ingresa el n˙mero 6 debe mostrar en pantalla:
+/*5.1.19 Ingresar un n√∫mero entero mayor a 0. Debe dibujar un tri√°ngulo rect√°ngulo con * con tantas filas como el n√∫mero indicado. En cada fila
+se va incrementando la cantidad de asteriscos. Por ejemplo, si se ingresa el n√∫mero 6 debe mostrar en pantalla:
 *
 **
 ***
@@ -612,9 +612,9 @@ int ejercicio51punto19()
 
 
 
-/*5.1.20 Ingresar un n˙mero entero mayor a 0. Debe dibujar una pir·mide con * con tantas filas como el n˙mero indicado. En cada fila se va
+/*5.1.20 Ingresar un n√∫mero entero mayor a 0. Debe dibujar una pir√°mide con * con tantas filas como el n√∫mero indicado. En cada fila se va
 incrementando la cantidad de asteriscos de 2 en 2.
-Por ejemplo, si se ingresa el n˙mero 5 debe mostrar en pantalla:
+Por ejemplo, si se ingresa el n√∫mero 5 debe mostrar en pantalla:
     *
    ***
   *****
@@ -645,8 +645,8 @@ int ejercicio51punto20()
 
 
 
-/*5.1.21 Tomando como base el ejercicio anterior ingresar un n˙mero entero mayor a 0 y dibujar un rombo con *. Por ejemplo, si se ingresa el
-n˙mero 5 dibuja la pir·mide de 5 filas y luego completa el rombo al ir decrementando la cantidad de asteriscos.
+/*5.1.21 Tomando como base el ejercicio anterior ingresar un n√∫mero entero mayor a 0 y dibujar un rombo con *. Por ejemplo, si se ingresa el
+n√∫mero 5 dibuja la pir√°mide de 5 filas y luego completa el rombo al ir decrementando la cantidad de asteriscos.
 *
 ***
 *****
