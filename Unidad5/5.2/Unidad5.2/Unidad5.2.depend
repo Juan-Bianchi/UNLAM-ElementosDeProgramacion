@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1658174918 source:c:\users\juan\desktop\codificaciones-progra1\elementos\unidad5\5.2\unidad5.2\unidad5.2.c
+	"Unidad5.2.h"
+
+1658174601 c:\users\juan\desktop\codificaciones-progra1\elementos\unidad5\5.2\unidad5.2\unidad5.2.h
+	<stdio.h>
+	<string.h>
+	<ctype.h>
+
