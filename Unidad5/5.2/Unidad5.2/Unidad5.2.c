@@ -50,7 +50,7 @@ int ejercicio52punto2()
     else
         dia = validaIntEntre(1, meses[mes-1], esValidoIntEntre);
 
-    printf("El dia y mes ingresados son: %2d/%02d\n\n", dia, mes);
+    printf("El dia y mes ingresados son: %02d/%02d\n\n", dia, mes);
 
     return TODO_OK;
 }
@@ -109,20 +109,22 @@ Ventas con cheque:              $ xxxx.xx
 Total de Venta:                 $ xxxx.xx
 Importe del IVA:                $ xxxx.xx
 Nota: El IVA corresponde al 21% del total de ventas.*/
-int ejercicio52punto1()
+int ejercicio52punto4()
 {
     double importe, totEfect = 0, totTarj = 0, totCheq = 0, ventaTotal, iva;
     char cod;
 
     puts("Ejercicio 5.2.4");
-    printf("Ingrese el codigo de forma de pago (F para finalizar la carga): ");
+    printf("Ingrese el codigo de forma de pago (E: Efectivo, T: tarjeta de credito, C: cheque , F para finalizar la carga): ");
     do
     {
         fflush(stdin);
         scanf("%c", &cod);
         fflush(stdin);
         cod = toupper(cod);
-    } while (cod != 'F' || cod != 'C' || cod != 'E' || cod != 'T');
+        if(cod != 'F' && cod != 'C' && cod != 'E' && cod != 'T')
+            printf("Se ha ingresado mal el codigo, vuelva a intentar: ");
+    } while (cod != 'F' && cod != 'C' && cod != 'E' && cod != 'T');
     while(cod!= 'F')
     {
         printf("Indique el importe pagado (mayor a 0): ");
@@ -145,19 +147,21 @@ int ejercicio52punto1()
             printf("El precio es $%.2f\n", importe);
             totTarj += importe;
         }
-        printf("Ingrese el codigo de forma de pago (F para finalizar la carga): ");
+        printf("Ingrese el codigo de forma de pago (E: Efectivo, T: tarjeta de credito, C: cheque , F para finalizar la carga): ");
         do
         {
             fflush(stdin);
             scanf("%c", &cod);
             fflush(stdin);
             cod = toupper(cod);
-        } while (cod != 'F' || cod != 'C' || cod != 'E' || cod != 'T');
+            if(cod != 'F' && cod != 'C' && cod != 'E' && cod != 'T')
+                printf("Se ha ingresado mal el codigo, vuelva a intentar: ");
+        } while (cod != 'F' && cod != 'C' && cod != 'E' && cod != 'T');
     }
     ventaTotal = totTarj + totCheq + totEfect;
-    iva = ventaTotal * 1.21;
+    iva = ventaTotal * 0.21;
 
-    printf("Efectivo en Caja:\t$%.2f\nVentas con Tarjeta de Credito:\t$%.2f\nVentas con cheque:\t$%.2f\nTotal de Venta:\t$%.2f\nImporte del IVA:\t$%.2f\nNota: El IVA corresponde al 21%% del total de ventas.\n\n", totEfect, totTarj, totCheq, ventaTotal, iva);
+    printf("%-40s$%.2f\n%-40s$%.2f\n%-40s$%.2f\n%-40s$%.2f\n%-40s$%.2f\nNota: El IVA corresponde al 21%% del total de ventas.\n\n","Efectivo en Caja:", totEfect, "Ventas con Tarjeta de Credito:", totTarj, "Ventas con cheque:", totCheq, "Total de Venta:", ventaTotal, "Importe del IVA:", iva);
 
     return TODO_OK;
 }
@@ -172,7 +176,7 @@ La condición final se establece según las siguientes reglas:
 • RINDE EXAMEN FINAL: ambas notas > = 4
 • REPROBO LA MATERIA: alguna nota no cumple lo anterior
 El programa finaliza cuando se ingresa un valor negativo como número de DNI. Al finalizar mostrar la nota promedio de alumnos promocionados.*/
-int ejercicio52punto4()
+int ejercicio52punto5()
 {
     int dni, nota1, nota2, cont = 0;
     float prom = 0, suma = 0;
@@ -189,23 +193,23 @@ int ejercicio52punto4()
         nota2 = validaIntEntre(1, 10, esValidoIntEntre);
         if(nota1 >= 7 && nota2 >= 7)
         {
-            printf("El alumno con DNI: %d, obtuvo las notas: %02d y %02d [PROMOCIONA]", dni, nota1, nota2);
+            printf("El alumno con DNI: %d, obtuvo las notas: %2d y %2d [PROMOCIONA]\n", dni, nota1, nota2);
             suma = nota1 + nota2;
-            cont ++;
+            cont += 2;
         }
         else
         {
             if(nota1 >= 4 && nota2 >= 4)
-                printf("El alumno con DNI: %d, obtuvo las notas: %02d y %02d [RINDE EXAMEN FINAL]", dni, nota1, nota2);
+                printf("El alumno con DNI: %d, obtuvo las notas: %2d y %2d [RINDE EXAMEN FINAL]\n", dni, nota1, nota2);
             else
-                printf("El alumno con DNI: %d, obtuvo las notas: %02d y %02d [REPROBO LA MATERIA]", dni, nota1, nota2);
+                printf("El alumno con DNI: %d, obtuvo las notas: %2d y %2d [REPROBO LA MATERIA]\n", dni, nota1, nota2);
         }
         printf("Ingrese el DNI del alumno (negativo para terminar): ");
         dni = validaIntIntervaloAbierto(0, 9000000, esValidoIntIntervAbierto);
     }
     if(cont)
         prom = (float)suma / cont;
-    printf("El promedio de los alumnos promocionados es %.2f\n\n", prom);
+    printf("\nEl promedio de los alumnos promocionados es %.2f\n\n", prom);
 
     return TODO_OK;
 }
@@ -218,8 +222,50 @@ int ejercicio52punto4()
 • mayor a 300 pesos el 25 %
 Confeccionar un programa que:
 a. Solicite un importe y calcule el descuento a efectuar y el importe neto a cobrar, con mensajes aclaratorios.
-b. Informe el importe promedio de todas las ventas realizadas.*/
-int ejercicio52punto6();
+b. Informe el importe promedio de todas las ventas realizadas.
+Se debe contemplar que se puedan ingresar varios importes y para finalizar se ingresa un valor negativo o cero.*/
+int ejercicio52punto6()
+{
+    float importe, desc, neto, suma=0, prom=0;
+    int cont = 0;
+
+    puts("Ejercicio 5.2.6");
+
+    printf("Ingrese el importe de la venta (cero o negativo para terminar): ");
+    scanf("%f", &importe);
+    fflush(stdin);
+    while(importe>0)
+    {
+        if(importe<50)
+            desc = importe * 0.035;
+        if(importe>=50 && importe<=150)
+            desc = importe * 0.1;
+        if(importe>150 && importe<=300)
+            desc = importe * 0.2;
+        if(importe>300)
+            desc = importe * 0.25;
+
+        neto = importe - desc;
+        suma += neto;
+        cont ++;
+
+        printf("%-20s$%.2f\n%-20s$%.2f\n%-20s$%.2f\n", "Importe: ", importe, "Descuento: ", desc, "Neto: ", neto);
+
+        printf("Ingrese el importe de la venta (cero o negativo para terminar): ");
+        scanf("%f", &importe);
+        fflush(stdin);
+    }
+    prom = suma / cont;
+
+    printf("El promedio de ventas es $%.2f\n\n", prom);
+
+    return TODO_OK;
+}
+
+
+
+/*5.2.7 Ingresar diversos quintetos de números positivos de 1 cifra c/u, finalizando cuando las cinco cifras leídas sean iguales a cero.
+Determinar e informar cuantos de los quintetos ingresados han formado números capicúas 'triples' y cuantos 'quíntuples'.*/
 int ejercicio52punto7();
 int ejercicio52punto8();
 int ejercicio52punto9();
