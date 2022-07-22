@@ -17,11 +17,12 @@
 #define TODO_OK 0
 
 
-int typedef booleano;
+typedef int booleano;
 
 int typedef (*esValidoEntre)(const void* elem, const void* inf, const void* sup);
 int typedef (*esValidoMayA)(const void* elem, const void* inf);
 int typedef (*esValidoIntAbierto)(const void* num, const void* izq, const void* der);
+int typedef (*esValidoEntreYCondFin)(const void* elem, const void* inf, const void* sup, const void* condFin);
 
 
 int ejercicio52punto1();

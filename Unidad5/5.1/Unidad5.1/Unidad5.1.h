@@ -17,7 +17,6 @@ typedef int booleano;
 booleano typedef (*EsValidoMayorA)(const void* num, const void* minimo);
 booleano typedef (*EsValidoEntre)(const void* num, const void* minimo, const void* maximo);
 
-
 int ejercicio51punto1();
 int ejercicio51punto2();
 int ejercicio51punto3();
